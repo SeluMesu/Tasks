@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+.item-container {
+    /* border: 2px rgb(0, 145, 137) solid; */
+    min-width: 390px;
+    overflow: hidden;
+    max-width: 599px;
+    flex: 1;
+    /* margin-right: 10px; */
+    margin: 10px;
+}
+.item-container > div {
+    padding: 20px;
+    border: 0.5px #1f2229 solid;
+    display: flex;
+    background: #2d3035;
+}
+.item-container * div {
+    display: flex;
+    /* outline: 1px red solid; */
+    /* padding: 20px; */
+}
+
+/* 
+checkbox style
+*/
+.checkbox-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #1f2229;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #2d3035;
+}
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #2196f3;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+
+    display: none;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+    left: 17px;
+    top: 12px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+.project-title p {
+    font-size: 20px;
+    margin-left: 70px;
+    font-weight: 600;
+    font-family: "Roboto Mono", monospace;
+}
+.priority {
+    display: flex;
+}
+.priority > div {
+    flex: 1;
+}
+.priority .right {
+    justify-content: end;
+}
+.item-container .title {
+    color: #fff;
+    font-weight: 600;
+}
+.project p,
+.priority p {
+    color: #bbbbbb;
+    font-size: 17px;
+    margin-left: 10px;
+    font-family: "Roboto Mono", monospace;
+}
+.priority span,
+.project span {
+    border-radius: 100vh;
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+.item-container .description {
+    max-height: 400px;
+    overflow: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #8c8b8d #202124;
+    overflow-y: auto;
+}
+.item-container .description p {
+    font-size: 20px;
+    font-family: "Roboto Mono", monospace;
+    text-overflow: ellipsis;
+    color: #bbbbbb;
+}
+.list-comments {
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-color: #8c8b8d #202124;
+    scrollbar-width: thin;
+}
+.list-comments::-webkit-scrollbar-thumb {
+    background: rgb(214, 0, 0);
+    border-radius: 100vh;
+    background-clip: content-box;
+}
+
+.list-comments p {
+    font-size: 20px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.add-comment textarea {
+    padding: 15px;
+    min-height: 60px;
+    width: 100%;
+    border: 0;
+    font-size: 18px;
+    word-wrap: break-word;
+    word-break: break-all;
+    background: #1f2229;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+}
+
+/*
+
+*/
+
+@media screen and (max-width: 1095px) {
+    .item-container {
+        max-width: 100%;
+        /* border: 2px rgb(1, 76, 238) solid; */
+    }
+}

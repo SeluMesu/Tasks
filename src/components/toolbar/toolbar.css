@@ -1,0 +1,47 @@
+.toolbar {
+    background: #2d3035;
+    padding: 10px;
+    max-height: 60px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.toolbar .brand-logo {
+    width: 80px;
+    height: 80px;
+    padding: 0 20px 0 10px;
+}
+.toolbar .profile {
+    margin-left: auto;
+    height: auto;
+    position: relative;
+    padding: 0;
+    max-width: 35px;
+    max-height: 35px;
+    display: flex;
+    color: red;
+}
+.toolbar .profile:hover {
+    background: rgb(0, 5, 7);
+    border-radius: 50%;
+}
+.toolbar .profile img {
+    width: 35px;
+}
+
+path {
+    fill: red;
+}
+.toolbar input {
+    padding: 8px 15px;
+    border-radius: 100vh;
+    border: 0;
+    background: #1f2229;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.toolbar input[type="text"]::-moz-placeholder {
+    color: #fff;
+}
