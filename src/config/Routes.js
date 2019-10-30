@@ -1,24 +1,62 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-
+import { pathRoutes } from "../utils/pathRoutes"
 //conponenets
+// import Dashboard from '../components/dashboard/Dashboard';
+// import Progress from '../components/progress/Progress'
 import Error400 from '../components/pages/Error404'
-import Dashboard from '../components/dashboard/Dashboard';
-import Sidebar from "../components/sidebar/Sidebar";
-import Toolbar from '../components/toolbar/Toolbar';
-import Progress from '../components/Progress'
-import Chats from '../components/chat/Chats'
-import Layout from '../components/Layout'
-import People from '../components/People'
-import Files from '../components/Files'
-import Mail from '../components/Mail'
-// import SidebarComponent from '../components/hoc/sidebarComponent'
+import Sidebar from "../components/sidebar/Sidebar"
+import Toolbar from '../components/toolbar/Toolbar'
+// import Profile from '../components/profile/Profile'
+// import People from '../components/people/People'
+// import Layout from '../components/layout/Layout'
+// import Files from '../components/files/Files'
+// import Chats from '../components/chat/Chats'
+// import Mail from '../components/mail/Mail'
 const Routes = () => {
     return (
         <Switch>
 
-            <Route exact path="/" render={() => <Redirect to="/dashboard" />} />
-            <Route exact path="/dashboard" component={Dashboard} />
+            {pathRoutes.map(({ path, Component }, index) => {
+                if (path === "/") {
+                    return (
+                        <Route key={index} exact path="/" render={() => <Redirect to="/dashboard" />} />
+                    )
+                }
+                return (
+                    <Route exact path={path} render={() => {
+                        return (
+                            <>
+                                <Toolbar />
+                                <div className="sidebar-container">
+                                    <Sidebar />
+                                    <Component />
+                                </div>
+                            </>
+                        )
+                    }} />
+                )
+            })}
+            <Route component={Error400} />
+            {/* <Route exact path="/:username" render={() => {
+                return (
+                    <Profile />
+                )
+            }} /> */}
+
+            {/* <Route exact path="/" render={() => <Redirect to="/dashboard" />} />
+
+            <Route exact path="/dashboard" render={() => {
+                return (
+                    <>
+                        <Toolbar />
+                        <div className="sidebar-container">
+                            <Sidebar />
+                            <Dashboard />
+                        </div>
+                    </>
+                )
+            }} />
             <Route exact path="/progress" render={() => {
                 return (
                     <>
@@ -32,7 +70,13 @@ const Routes = () => {
             }} />
             <Route exact path="/layouts" render={() => {
                 return (
-                    <Layout />
+                    <>
+                        <Toolbar />
+                        <div className="sidebar-container">
+                            <Sidebar />
+                            <Layout />
+                        </div>
+                    </>
                 )
             }} />
             <Route exact path="/people" render={() => {
@@ -42,14 +86,19 @@ const Routes = () => {
                         <div className="sidebar-container">
                             <Sidebar />
                             <People />
-                            <Dashboard />
                         </div>
                     </>
                 )
             }} />
             <Route exact path="/files" render={() => {
                 return (
-                    <Files />
+                    <>
+                        <Toolbar />
+                        <div className="sidebar-container">
+                            <Sidebar />
+                            <Files />
+                        </div>
+                    </>
                 )
             }} />
             <Route exact path="/chats" render={() => {
@@ -74,7 +123,7 @@ const Routes = () => {
                     </>
                 )
             }} />
-            <Route component={Error400} />
+            <Route component={Error400} /> */}
         </Switch>
     )
 }

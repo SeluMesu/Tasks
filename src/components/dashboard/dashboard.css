@@ -2,17 +2,11 @@
     background: #1f2229;
     color: #fff;
     overflow-y: auto;
-    /* padding: 20px; */
-    /* flex-wrap: nowrap; */
-    /* flex-grow: 1; */
-    /* flex: 80%; */
     width: 100%;
     height: calc(100vh - 60px);
-    /* height: calc(100vh + 100px); */
 }
 .dashboard .wrapper {
     display: flex;
     padding: 10px;
-    /* justify-content: space-between; */
     flex-wrap: wrap;
 }

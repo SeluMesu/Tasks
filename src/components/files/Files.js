@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Chats() {
+const Files = (props) => {
     return (
         <div className="dashboard">
             <div className="wrapper">
+
             </div>
         </div>
     )
 }
-
-export default Chats
+export default Files;

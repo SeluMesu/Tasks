@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from "react-router-dom"
 import home from '../../asset/images/home.svg'
-import { routes } from '../../utils/pathRoutes'
+import { linkRoutes } from '../../utils/pathRoutes'
 import { MdArrowBack as ArrowBack, MdArrowForward as ArrowForward } from 'react-icons/md'
 import './sidebar.css'
 function Sidebar() {
@@ -13,13 +13,15 @@ function Sidebar() {
         <div className={open ? "sidebar close" : "sidebar open"}>
             <nav>
                 <ul className="list">
-                    {routes.map((link, index) => {
-                        return <li className="list__item" key={index}>
-                            <NavLink activeStyle={{ color: "red" }} to={link.to}>
-                                <img src={home} alt="icon" />
-                                <span>{link.name}</span>
-                            </NavLink>
-                        </li>
+                    {linkRoutes.map((link, index) => {
+                        return (
+                            <li className="list__item" key={index}>
+                                <NavLink activeStyle={{ color: "#399bff", background: "#1f2229", outline: "none" }} to={link.to}>
+                                    <img src={home} alt="icon" />
+                                    <span>{link.name}</span>
+                                </NavLink>
+                            </li>
+                        )
                     })}
                 </ul>
             </nav>

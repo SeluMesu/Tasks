@@ -1,5 +1,4 @@
 import React from 'react'
-import sidebarComponent from './hoc/sidebarComponent'
 
 function Layout() {
     return (
@@ -10,4 +9,4 @@ function Layout() {
     )
 }
 
-export default sidebarComponent(Layout)
+export default Layout;

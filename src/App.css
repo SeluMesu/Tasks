@@ -3,26 +3,25 @@
     margin: 0;
     box-sizing: border-box;
 }
+*:focus {
+    outline: none;
+}
 html {
     height: 100%;
     overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
 }
 .container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
-a {
-    text-decoration: none;
-}
-p {
-    font-size: 30px;
-}
-ul {
-    list-style: none;
-}
-
 .sidebar-container {
     display: flex;
-    /* flex-direction: column; */
 }

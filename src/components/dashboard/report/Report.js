@@ -1,10 +1,9 @@
 import React from 'react'
-import Comment from './dashboard/comment/Comment'
+import Comment from '../comment/Comment'
 // import Masonry from 'masonry-layout'
-import './item.css'
-const Item = ({ comment }) => {
-
-
+import './report.css'
+const Report = ({ report }) => {
+    const { desc, title, project, dueDate, priority, comments } = report;
     return (
         <div className="item-container">
             <div className="project-title">
@@ -13,34 +12,30 @@ const Item = ({ comment }) => {
                     <span className="checkmark"></span>
                 </label>
                 <p>
-                    Integret PayPal and Stripe Checkout
+                    {title}
                 </p>
             </div>
             <div className="project">
                 <span></span>
                 <p>Project: </p>
-                <p className="title">Payments</p>
+                <p className="title">{project}</p>
             </div>
             <div className="flex priority">
                 <div className="left">
                     <span></span>
                     <p>Priority: </p>
-                    <p className="title">High</p>
+                    <p className="title">{priority}</p>
                 </div>
                 <div className="right">
                     <p>Due: </p>
-                    <p className="title"> Today</p>
+                    <p className="title"> {dueDate}</p>
                 </div>
             </div>
             <div className="description">
-                <p>{comment}</p>
+                <p>{desc}</p>
             </div>
             <div className="list-comments">
-                {/* <p>No Comment</p> */}
-                <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
+                {comments.map((comment, index) => <Comment key={index} comment={comment} />)}
             </div>
             <div className="add-comment">
                 <textarea type="plain/text" placeholder="Add Comment ..." />
@@ -49,4 +44,4 @@ const Item = ({ comment }) => {
     )
 }
 
-export default Item
+export default Report

@@ -7,8 +7,9 @@
     box-sizing: border-box;
 }
 .toolbar .brand-logo {
-    width: 80px;
+    width: 60px;
     height: 80px;
+    /* margin-left: 10px; */
     padding: 0 20px 0 10px;
 }
 .toolbar .profile {

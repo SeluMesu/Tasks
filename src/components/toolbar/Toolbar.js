@@ -9,7 +9,7 @@ const Toolbar = () => {
             <img className="brand-logo" src={logo} alt="brand logo" />
             <input placeholder="Search..." type='text' />
             <div className="profile">
-                <Link to="/seluhadu">
+                <Link to="username">
                     <img src={profile} alt="User profile" />
                 </Link >
             </div>
