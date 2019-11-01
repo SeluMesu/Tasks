@@ -1,6 +1,7 @@
 import React from 'react'
 import './comment.css'
-const Comment = ({ comment }) => {
+import PropTypes from 'prop-types'
+const CommentCard = ({ comment }) => {
     const { text, name, profileImg } = comment;
     return (
         <div className="comment">
@@ -19,4 +20,11 @@ const Comment = ({ comment }) => {
     )
 }
 
-export default Comment
+Comment.propTypes = {
+    comment: PropTypes.shape({
+        text: PropTypes.string,
+        name: PropTypes.string,
+        profileImg: PropTypes.string,
+    })
+}
+export default CommentCard

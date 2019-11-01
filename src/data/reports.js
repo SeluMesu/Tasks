@@ -18,6 +18,30 @@ export const reports = [
                 profileImg: "https://image.flaticon.com/icons/svg/149/149071.svg",
                 commentedAt: "",
                 updatedAt: "",
+            }, {
+                name: "Selu Hadu",
+                text: "It think this is very high. We need to take it sirously.",
+                profileImg: "https://image.flaticon.com/icons/svg/149/149071.svg",
+                commentedAt: "",
+                updatedAt: "",
+            }, {
+                name: "Hadu Mesu",
+                text: "This has happped to me too. The game keeps crashing. I don't know how to solve this problem. Any one?",
+                profileImg: "https://image.flaticon.com/icons/svg/149/149071.svg",
+                commentedAt: "",
+                updatedAt: "",
+            }, {
+                name: "Selu Hadu",
+                text: "It think this is very high. We need to take it sirously.",
+                profileImg: "https://image.flaticon.com/icons/svg/149/149071.svg",
+                commentedAt: "",
+                updatedAt: "",
+            }, {
+                name: "Hadu Mesu",
+                text: "This has happped to me too. The game keeps crashing. I don't know how to solve this problem. Any one?",
+                profileImg: "https://image.flaticon.com/icons/svg/149/149071.svg",
+                commentedAt: "",
+                updatedAt: "",
             },
         ]
     },
@@ -47,6 +71,19 @@ export const reports = [
         dueDate: "Today",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi massa, porttitor ac felis ut, auctor blandit odio. Nulla facilisi. Ut sit amet interdum nisl, non ullamcorper lectus. Sed mauris est, euismod in purus vitae, luctus posuere mauris.",
         comments: [
+            {
+                name: "Selu Hadu",
+                text: "It think this is very high. We need to take it sirously.",
+                profileImg: "https://image.flaticon.com/icons/svg/149/149071.svg",
+                commentedAt: "",
+                updatedAt: "",
+            }, {
+                name: "Hadu Mesu",
+                text: "This has happped to me too. The game keeps crashing. I don't know how to solve this problem. Any one?",
+                profileImg: "https://image.flaticon.com/icons/svg/149/149071.svg",
+                commentedAt: "",
+                updatedAt: "",
+            },
             {
                 name: "Selu Hadu",
                 text: "It think this is very high. We need to take it sirously.",
@@ -153,6 +190,12 @@ export const reports = [
         comments: [{
             name: "Hadu Mesu",
             text: "This has happped to me too. The game keeps crashing. I don't know how to solve this problem. Any one?",
+            profileImg: "https://image.flaticon.com/icons/svg/149/149071.svg",
+            commentedAt: "",
+            updatedAt: "",
+        }, {
+            name: "Selu Hadu",
+            text: "It think this is very high. We need to take it sirously.",
             profileImg: "https://image.flaticon.com/icons/svg/149/149071.svg",
             commentedAt: "",
             updatedAt: "",

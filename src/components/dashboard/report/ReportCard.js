@@ -1,8 +1,8 @@
 import React from 'react'
-import Comment from '../comment/Comment'
-// import Masonry from 'masonry-layout'
+import CommentCard from '../comment/CommentCard'
+import PropTypes from 'prop-types'
 import './report.css'
-const Report = ({ report }) => {
+const ReportCard = ({ report }) => {
     const { desc, title, project, dueDate, priority, comments } = report;
     return (
         <div className="item-container">
@@ -35,7 +35,7 @@ const Report = ({ report }) => {
                 <p>{desc}</p>
             </div>
             <div className="list-comments">
-                {comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+                {comments.map((comment, index) => <CommentCard key={index} comment={comment} />)}
             </div>
             <div className="add-comment">
                 <textarea type="plain/text" placeholder="Add Comment ..." />
@@ -44,4 +44,15 @@ const Report = ({ report }) => {
     )
 }
 
-export default Report
+
+ReportCard.propTypes = {
+    report: PropTypes.shape({
+        desc: PropTypes.string,
+        title: PropTypes.string,
+        project: PropTypes.string,
+        dueDate: PropTypes.string,
+        priority: PropTypes.string,
+        comments: PropTypes.array
+    })
+}
+export default ReportCard

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from "react-router-dom"
-import home from '../../asset/images/home.svg'
+// import home from '../../asset/images/home.svg'
 import { linkRoutes } from '../../utils/pathRoutes'
 import { MdArrowBack as ArrowBack, MdArrowForward as ArrowForward } from 'react-icons/md'
 import './sidebar.css'
@@ -17,7 +17,7 @@ function Sidebar() {
                         return (
                             <li className="list__item" key={index}>
                                 <NavLink activeStyle={{ color: "#399bff", background: "#1f2229", outline: "none" }} to={link.to}>
-                                    <img src={home} alt="icon" />
+                                    <img src={link.icon} alt="icon" />
                                     <span>{link.name}</span>
                                 </NavLink>
                             </li>

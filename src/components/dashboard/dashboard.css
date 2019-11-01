@@ -1,12 +1,18 @@
+.main-content {
+    background: #2d3035;
+    flex: 1;
+}
 .dashboard {
     background: #1f2229;
     color: #fff;
     overflow-y: auto;
-    width: 100%;
+    /* width: 100%; */
+    flex: 1;
     height: calc(100vh - 60px);
 }
 .dashboard .wrapper {
-    display: flex;
+    /* display: flex; */
     padding: 10px;
-    flex-wrap: wrap;
+    overflow: hidden;
+    /* flex-wrap: wrap; */
 }

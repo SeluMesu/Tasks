@@ -24,17 +24,15 @@ const Routes = () => {
                     )
                 }
                 return (
-                    <Route exact path={path} render={() => {
-                        return (
-                            <>
-                                <Toolbar />
-                                <div className="sidebar-container">
-                                    <Sidebar />
-                                    <Component />
-                                </div>
-                            </>
-                        )
-                    }} />
+                    <Route exact path={path} render={({ match }) =>
+                        <>
+                            <Toolbar />
+                            <div className="sidebar-container">
+                                <Sidebar />
+                                <Component match={match} />
+                            </div>
+                        </>
+                    } />
                 )
             })}
             <Route component={Error400} />

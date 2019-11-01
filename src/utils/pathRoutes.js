@@ -1,51 +1,58 @@
 import Dashboard from '../components/dashboard/Dashboard';
 import Progress from '../components/progress/Progress'
-// import Error400 from '../components/pages/Error404'
 import People from '../components/people/People'
 import Layout from '../components/layout/Layout'
 import Files from '../components/files/Files'
 import Chats from '../components/chat/Chats'
 import Mail from '../components/mail/Mail'
+//icons
+import home from '../asset/images/home.svg'
+import files from '../asset/images/file.svg'
+import people from '../asset/images/home.svg'
+import mail from '../asset/images/mail.svg'
+import chat from '../asset/images/chat.svg'
+import progress from '../asset/images/progress.svg'
+import layout from '../asset/images/layouts.svg'
 export const linkRoutes = [
     {
         to: '/dashboard',
         name: "Dashboard",
-        icon: '',
+        icon: home,
 
     },
     {
         to: '/files',
         name: "Files",
-        icon: '',
+        icon: files,
 
     },
     {
         to: '/layouts',
         name: "Layouts",
-        icon: '',
+        icon: layout,
 
     },
     {
         to: '/people',
         name: "People",
-        icon: '',
+        icon: people,
 
     },
     {
         to: '/chats',
         name: "Chats",
-        icon: '',
+        icon: chat,
 
     }, {
         to: '/mail',
         name: "Mail",
-        icon: '',
+        icon: mail,
 
     },
     {
         to: '/progress',
         name: "Progress",
-        icon: '',
+        icon: progress,
 
     },
 
